@@ -29,8 +29,9 @@ jobs:
         pip install chromedriver-autoinstaller
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: open main.py
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        main.py
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+      run: | 
+        execute main.py
+      
+      
+
 
