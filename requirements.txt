@@ -1,0 +1,3 @@
+selenium==4.5.0
+python-pushsafer==1.0
+chromedriver-autoinstaller==0.4.0
