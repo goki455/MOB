@@ -5,8 +5,15 @@ import chromedriver_autoinstaller
 from selenium.webdriver.chrome.service import Service
 import time
 from selenium.webdriver.chrome.options import Options
-chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
+#Chrome options
+
+
+
+client = Client("bjHKdba7y0Hj8LRlRs3i")
+
+
+chromedriver_autoinstaller.install()
 #Chrome options
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
@@ -15,11 +22,7 @@ chrome_options.add_argument('--disable-dev-shm-usage')
 
 #Run chrome
 driver = webdriver.Chrome(options=chrome_options)
-client = Client("bjHKdba7y0Hj8LRlRs3i")
 
-
-chromedriver_autoinstaller.install()
-driver = webdriver.Chrome(service=Service(), options=chrome_options)
 
 
 Url = ("https://www.mobile.de/")
