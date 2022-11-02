@@ -15,15 +15,23 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 
 chromedriver_autoinstaller.install()
 #Chrome options
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument("--disable-infobars")
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_experimental_option("detach", True)
+
+self.chrome_options = webdriver.ChromeOptions()
+self.chrome_options.add_argument("--window-size=1920,1080")
+self.chrome_options.add_argument("--disable-extensions")
+self.chrome_options.add_argument("--proxy-server='direct://'")
+self.chrome_options.add_argument("--proxy-bypass-list=*")
+self.chrome_options.add_argument("--start-maximized")
+self.chrome_options.add_argument('--headless')
+self.chrome_options.add_argument('--disable-gpu')
+self.chrome_options.add_argument('--disable-dev-shm-usage')
+self.chrome_options.add_argument('--no-sandbox')
+self.chrome_options.add_argument('--ignore-certificate-errors')
+self.browser = webdriver.Chrome(options=self.chrome_options)
 
 
 #Run chrome
-driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome(options=self.chrome_options)
 
 
 
