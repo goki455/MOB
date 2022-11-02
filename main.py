@@ -63,7 +63,7 @@ if valueget > "0":
     next_c.click()
     sleep(8.0)
 
-    get_URL = driver.find_element(By.XPATH, '//*[@id="main-header"]/div[2]/nav/div/ul[1]/li[3]/ul/li[1]/a').get_attribute("href")
+    get_URL = driver.find_element(By.CSS_SELECTOR, '#main-header > div.mde-react-header__navbar.clearfix > nav > div > ul:nth-child(1) > li:nth-child(3) > ul > li:nth-child(1) > a').get_attribute("href")
 
     resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL ,
                                  "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
