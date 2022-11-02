@@ -39,7 +39,7 @@ Url = ("https://www.mobile.de/")
 
 driver.get(Url)
 
-sleep(8.0)
+sleep(15.0)
 buttonc = driver.find_element(By.XPATH , '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 
 buttonc.click()
