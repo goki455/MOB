@@ -3,7 +3,7 @@ from pushsafer import Client
 from selenium.webdriver.common.by import By
 import chromedriver_autoinstaller
 from selenium.webdriver.chrome.service import Service
-import time
+from time import sleep
 from selenium.webdriver.chrome.options import Options
 
 #Chrome options
