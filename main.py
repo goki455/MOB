@@ -16,18 +16,18 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 chromedriver_autoinstaller.install()
 #Chrome options
 
-self.chrome_options = webdriver.ChromeOptions()
-self.chrome_options.add_argument("--window-size=1920,1080")
-self.chrome_options.add_argument("--disable-extensions")
-self.chrome_options.add_argument("--proxy-server='direct://'")
-self.chrome_options.add_argument("--proxy-bypass-list=*")
-self.chrome_options.add_argument("--start-maximized")
-self.chrome_options.add_argument('--headless')
-self.chrome_options.add_argument('--disable-gpu')
-self.chrome_options.add_argument('--disable-dev-shm-usage')
-self.chrome_options.add_argument('--no-sandbox')
-self.chrome_options.add_argument('--ignore-certificate-errors')
-self.browser = webdriver.Chrome(options=self.chrome_options)
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--window-size=1920,1080")
+chrome_options.add_argument("--disable-extensions")
+chrome_options.add_argument("--proxy-server='direct://'")
+chrome_options.add_argument("--proxy-bypass-list=*")
+chrome_options.add_argument("--start-maximized")
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--ignore-certificate-errors')
+browser = webdriver.Chrome(options=chrome_options)
 
 
 
@@ -37,9 +37,9 @@ self.browser = webdriver.Chrome(options=self.chrome_options)
 
 Url = ("https://www.mobile.de/")
 
-self.browser.get(Url)
+browser.get(Url)
 
-sleep(15.0)
+sleep(8.0)
 buttonc = driver.find_element(By.XPATH , '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 
 buttonc.click()
