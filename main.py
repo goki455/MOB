@@ -37,7 +37,7 @@ driver = webdriver.Chrome(options=chrome_options)
 
 Url = ("https://www.mobile.de/")
 
-browser.get(Url)
+driver.get(Url)
 
 sleep(8.0)
 buttonc = driver.find_element(By.XPATH , '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
