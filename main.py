@@ -39,11 +39,11 @@ Url = ("https://www.mobile.de/")
 
 driver.get(Url)
 
-time.sleep(2.0)
+time.sleep(8.0)
 buttonc = driver.find_element(By.XPATH , '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 
 buttonc.click()
-time.sleep(1.0)
+time.sleep(6.0)
 #Marke_input=input("Welche Marke? :")
 Marke_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div/select').send_keys("Audi")
 #Model_input = input("Welches Modell ? :")
@@ -54,7 +54,7 @@ KM_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/sec
 Price_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[6]/div/div[1]/input').send_keys("35000")
 GPS_butt = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[7]/span/span')
 GPS_butt.click()
-time.sleep(2.0)
+time.sleep(4.0)
 
 # Funktion für die Plausibilisierung
 
