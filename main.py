@@ -22,10 +22,12 @@ options1 = webdriver.ChromeOptions() #try
 
 options1.add_argument("--disable-extensions")
 options1.add_experimental_option("useAutomationExtension", False)
-options1.add_argument("--proxy-server='direct://'")
 options1.add_argument("--proxy-bypass-list=*")
 options1.add_argument("--start-maximized")
-options1.add_argument("--headless") 
+options1.add_argument("--headless")
+options1.add_argument("--window-size=800,600")
+options1.add_argument("no-sandbox")
+options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36')
 
 driver = webdriver.Chrome(options=options1)
 
