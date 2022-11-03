@@ -49,7 +49,7 @@ Model_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/
 #KM_input = input("Wie viel Kilometer ? :")
 KM_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[4]/div/div[1]/input').send_keys("100000")
 #Price_input = input("Wie viel soll er kosten ? :")
-Price_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[6]/div/div[1]/input').send_keys("35000")
+Price_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[6]/div/div[1]/input').send_keys("9000")
 #GPS_butt = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[7]/span/span')
 #GPS_butt.click()
 sleep(3.0)
