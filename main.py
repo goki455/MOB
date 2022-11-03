@@ -47,8 +47,8 @@ driver.get(Url)
 sleep(10.0)
 #def Try():
 #    try:
-        buttonc = driver.find_element(By.CSS_SELECTOR, '#mde-consent-modal-container > div.sc-iBkjds.frmJSB > div.sc-papXJ.ixHhna > div.sc-jqUVSM.dBIrCF > button')
-        buttonc.click()
+ #       buttonc = driver.find_element(By.CSS_SELECTOR, '#mde-consent-modal-container > div.sc-iBkjds.frmJSB > div.sc-papXJ.ixHhna > div.sc-jqUVSM.dBIrCF > button')
+#        buttonc.click()
 #    except:
   #      return
 #Try()
