@@ -27,7 +27,7 @@ jobs:
         run: sudo apt install -y chromium-browser
       - name: Install all necessary packages
       
-        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium push-safer
+        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium python-pushsafer
              pip install -r requirements.txt
       - name: Run the scraping script
         run: python main.py
