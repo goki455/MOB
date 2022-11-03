@@ -41,7 +41,7 @@ sleep(4.0)
 buttonc = driver.find_element(By.XPATH , '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 
 buttonc.click()
-sleep(2.0)
+sleep(10.0)
 #Marke_input=input("Welche Marke? :")
 Marke_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div/select')
 Marke_pusc = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div/svg')
