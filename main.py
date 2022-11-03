@@ -41,8 +41,8 @@ driver = webdriver.Chrome(options=options1)
 
 
 Url = ("https://www.mobile.de/")
-buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
-buttonc.click()
+#buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
+#buttonc.click()
 driver.get(Url)
 def Try():
     try:
