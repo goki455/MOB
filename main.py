@@ -1,7 +1,7 @@
 from selenium import webdriver
 from pushsafer import Client
 from selenium.webdriver.common.by import By
-import chromedriver_autoinstaller
+import webdriver-manager
 from selenium.webdriver.chrome.service import Service
 from time import sleep
 from selenium.webdriver.chrome.options import Options
