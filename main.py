@@ -6,12 +6,10 @@ from selenium.webdriver.chrome.service import Service
 from time import sleep
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-from fake_useragent import UserAgent
+
 
 #Chrome options
 
-ua = UserAgent(verify_ssl=True)
-userAgent = ua.random
 
 
 client = Client("bjHKdba7y0Hj8LRlRs3i")
@@ -20,16 +18,16 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 chromedriver_autoinstaller.install()
 #Chrome options
 
-chrome_options = webdriver.ChromeOptions()
+options1 = webdriver.ChromeOptions()
 
-chrome_options.add_argument("--start-maximized")
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--headless')
-chrome_options.add_argument("--window-size=1920,1080")
-chrome_options.add_argument('--ignore-certificate-errors')
-chrome_options.add_argument(f'user-agent={userAgent}')
-driver = webdriver.Chrome(options=chrome_options)
+options1.addArguments("--disable-extensions")
+options1.setExperimentalOption("useAutomationExtension", false)
+options1.addArguments("--proxy-server='direct://'")
+options1.addArguments("--proxy-bypass-list=*")
+options1.addArguments("--start-maximized")
+options1.addArguments("--headless")
+
+driver = webdriver.Chrome(options=options1)
 
 
 
