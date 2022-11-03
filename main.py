@@ -64,7 +64,7 @@ if valueget >= "0":
     sleep(8.0)
     next_c = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[8]')
     next_c.click()
-    sleep(8.0)
+    driver.implicitly_wait(20)
     driver.save_screenshot("Bild.png")
     
 
