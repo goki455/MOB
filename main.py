@@ -47,7 +47,7 @@ Marke_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/
 if Marke_push == True:
     print("True")
 else:
-    print("nicht gefunden")
+    print(driver.current_url)
 #Marke_push.send_keys("Audi")
 #sleep(2.0)
 #Model_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[2]/div/select')
