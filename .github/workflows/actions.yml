@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: Ubuntu 22.04
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2
