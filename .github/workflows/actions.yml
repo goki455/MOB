@@ -23,7 +23,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install webdrivermanager
           pip install -r requirements.txt
-          sudo apt install ./google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb #Test
       - name: execute py script # run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
