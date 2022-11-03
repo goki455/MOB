@@ -2,5 +2,5 @@ selenium==4.5.0
 python-pushsafer==1.0
 chromedriver-autoinstaller==0.4.0
 python-time==0.3.0
-webdrivermanager==3.8.4
+webdrivermanager
 packaging==21.3
