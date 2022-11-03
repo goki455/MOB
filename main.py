@@ -26,12 +26,11 @@ options1.add_argument("--proxy-bypass-list=*")
 options1.add_argument("--start-maximized")
 options1.add_argument("--disable-gpu")
 options1.add_argument("--headless")
-options1.add_argument("--window-size=800,600")
+options1.add_argument("--window-size=1920,1080")
 options1.add_argument("no-sandbox")
 options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36')
 options1.add_argument('--ignore-certificate-errors')
 options1.add_argument('--allow-running-insecure-content')
-
 driver = webdriver.Chrome(options=options1)
 
 
@@ -41,37 +40,41 @@ driver = webdriver.Chrome(options=options1)
 
 
 Url = ("https://www.mobile.de/")
+
+driver.get(Url)
 #buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 #buttonc.click()
-driver.get(Url)
+
 def Try():
     try:
         buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
         buttonc.click()
     except:
         return
-#sleep(20.0)
+Try()
+
+sleep(5.0)
 
 
-sleep(10.0)
+sleep(5.0)
 #Marke_input=input("Welche Marke? :")
-Marke_push = driver.find_element(By.XPATH , '//*[@id="root"]/div[2]/div/article[1]/section/div/div[2]/div/div[1]/div/select')
-#Marke_pusc = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div/svg')
-#Marke_push.click()
+#Marke_pusc = driver.find_element(By.CSS_SELECTOR , '#root > div.hp7JS > div > article.RSseD._3LZ_7._2iEKW > section > div > div.UiAUP > div > div:nth-child(1) > div > select')
+Marke_push = driver.find_element(By.CSS_SELECTOR , '#root > div.hp7JS > div > article.RSseD._3LZ_7._2iEKW > section > div > div.UiAUP > div > div:nth-child(1) > div > select')
 Marke_push.send_keys("Audi")
+Marke_push.click()
 
 #Model_input = input("Welches Modell ? :")
-Model_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[2]/div/select')
+Model_push = driver.find_element(By.CSS_SELECTOR , '#root > div.hp7JS > div > article.RSseD._3LZ_7._2iEKW > section > div > div.UiAUP > div > div:nth-child(2) > div > select')
 Model_push.click()
 Model_push.send_keys("S3")
 
 #KM_input = input("Wie viel Kilometer ? :")
 KM_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[4]/div/div[1]/input')
-KM_push.click()
+#KM_push.click()
 KM_push.send_keys("100000")
 #Price_input = input("Wie viel soll er kosten ? :")
 Price_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[6]/div/div[1]/input')
-Price_push.click()
+#Price_push.click()
 Price_push.send_keys("9000")
 #GPS_butt = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[7]/span/span')
 #GPS_butt.click()
