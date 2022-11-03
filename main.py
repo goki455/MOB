@@ -46,7 +46,7 @@ def Try():
         buttonc.click()
     except:
         return
-sleep(20.0)
+#sleep(20.0)
 
 
 sleep(10.0)
