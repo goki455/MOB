@@ -1,7 +1,7 @@
 from selenium import webdriver
 from pushsafer import Client
 from selenium.webdriver.common.by import By
-import webdriver_manager
+import webdrivermanager
 from time import sleep
 import packaging
 from selenium.webdriver.common.keys import Keys
