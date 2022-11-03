@@ -3,6 +3,7 @@ from pushsafer import Client
 from selenium.webdriver.common.by import By
 import webdriver_manager
 from time import sleep
+import packaging
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.utils import ChromeType
