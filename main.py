@@ -10,7 +10,7 @@ from fake_useragent import UserAgent
 
 #Chrome options
 
-ua = UserAgent()
+ua = UserAgent(verify_ssl=False)
 userAgent = ua.random
 
 
