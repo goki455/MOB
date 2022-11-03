@@ -29,6 +29,8 @@ options1.add_argument("--headless")
 options1.add_argument("--window-size=800,600")
 options1.add_argument("no-sandbox")
 options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36')
+options1.add_argument('--ignore-certificate-errors')
+options1.add_argument('--allow-running-insecure-content')
 
 driver = webdriver.Chrome(options=options1)
 
@@ -39,7 +41,8 @@ driver = webdriver.Chrome(options=options1)
 
 
 Url = ("https://www.mobile.de/")
-
+buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
+buttonc.click()
 driver.get(Url)
 def Try():
     try:
