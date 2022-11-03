@@ -52,7 +52,7 @@ sleep(10.0)
 #    except:
   #      return
 #Try()
-buttonc = driver.find_element(By.CSS_SELECTOR, '#mde-consent-modal-container > div.sc-iBkjds.frmJSB > div.sc-papXJ.ixHhna > div.sc-jqUVSM.dBIrCF > button')
+buttonc = driver.find_element(By.ID, 'sc-bczRLJ iBneUr mde-consent-accept-btn')
 buttonc.click()
 sleep(5.0)
 
