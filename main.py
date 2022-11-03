@@ -18,14 +18,14 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 chromedriver_autoinstaller.install()
 #Chrome options
 
-options1 = webdriver.ChromeOptions()
+options1 = webdriver.ChromeOptions() #try
 
 options1.addArguments("--disable-extensions")
 options1.setExperimentalOption("useAutomationExtension", false)
 options1.addArguments("--proxy-server='direct://'")
 options1.addArguments("--proxy-bypass-list=*")
 options1.addArguments("--start-maximized")
-options1.addArguments("--headless")
+options1.addArguments("--headless") 
 
 driver = webdriver.Chrome(options=options1)
 
