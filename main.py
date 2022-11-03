@@ -73,7 +73,7 @@ if Marke_push == True:
    # driver.find_element(By.XPATH, '//*[@id="main-header"]/div[2]/nav/div/ul[1]/li[3]/ul/li[1]/a').get_attribute("href")
 
     #resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", driver.find_element(By.XPATH, '//*[@id="main-header"]/div[2]/nav/div/ul[1]/li[3]/ul/li[1]/a').get_attribute("href") ,
-                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
+           #                      "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
 
 
 #else:
