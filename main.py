@@ -6,7 +6,7 @@ from time import sleep
 import packaging
 from selenium.webdriver.common.keys import Keys
 from webdrivermanager.chrome import ChromeDriverManager
-from webdrivermanager.utils import ChromeType
+from webdrivermanager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
