@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@goki455 
-goki455
-/
-MOB
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-MOB/main.py /
-@goki455
-goki455 Update main.py
-Latest commit cf3eee0 5 hours ago
- History
- 1 contributor
-77 lines (51 sloc)  2.76 KB
-
 from selenium import webdriver
 from pushsafer import Client
 from selenium.webdriver.common.by import By
