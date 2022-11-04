@@ -25,12 +25,13 @@ options1.add_experimental_option("useAutomationExtension", False)
 options1.add_argument("--proxy-bypass-list=*")
 options1.add_argument("--start-maximized")
 options1.add_argument("--disable-gpu")
-#options1.add_argument("--headless")
+options1.add_argument("--headless")
 options1.add_argument("--window-size=1920,1080")
 options1.add_argument("no-sandbox")
 options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36')
 options1.add_argument('--ignore-certificate-errors')
 options1.add_argument('--allow-running-insecure-content')
+options1.use_chromium = True
 driver = webdriver.Chrome(options=options1)
 
 
