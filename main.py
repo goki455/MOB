@@ -97,12 +97,12 @@ span_element = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]
 valueget = (span_element.text[0])
 sleep(4.0)
 
-def returnthevalue(newurl):
+def returnthevalue():
 
     if valueget > "0":
         next_c = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[8]/button/span/span/span')
         next_c.click()
-        sleep(3.0)
+        sleep(10.0)
 
         get_URL = driver.current_url
         return get_URL
@@ -113,9 +113,9 @@ def returnthevalue(newurl):
     else:
         print("Keine Ergebnisse")
 
-returnthevalue(newurl= Url)
 
-resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2",Url,
+
+resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2",returnthevalue(),
        "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
 
 
