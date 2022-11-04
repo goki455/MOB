@@ -97,15 +97,25 @@ span_element = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]
 valueget = (span_element.text[0])
 sleep(4.0)
 
-if valueget >= "0":
-    sleep(8.0)
-    next_c = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[8]').click()
-    sleep(8.0)
-    driver.find_element(By.XPATH, '//*[@id="main-header"]/div[2]/nav/div/ul[1]/li[3]/ul/li[1]/a').get_attribute("href")
+def returnthevalue(newurl):
 
-    resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", driver.find_element(By.XPATH, '//*[@id="main-header"]/div[2]/nav/div/ul[1]/li[3]/ul/li[1]/a').get_attribute("href") ,
-                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
+    if valueget > "0":
+        next_c.click()
+        sleep(3.0)
+
+        get_URL = driver.current_url
+        return get_URL
 
 
-else:
-    print("Keine Ergebnisse")
+
+
+    else:
+        print("Keine Ergebnisse")
+
+returnthevalue(newurl= Url)
+
+resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2",Url,
+       "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
+
+
+
