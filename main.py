@@ -67,7 +67,7 @@ Marke_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/
 ActionChains(driver).move_to_element(Marke_push).click(Marke_push).perform()
 
 sleep(5.0)
-Marke_push.send_keys("Audi")
+
 sleep(5.0)
 Marke_push.click()
 
