@@ -45,15 +45,15 @@ driver.get(Url)
 #buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 #buttonc.click()
 sleep(10.0)
-#def Try():
-#    try:
- #       buttonc = driver.find_element(By.CSS_SELECTOR, '#mde-consent-modal-container > div.sc-iBkjds.frmJSB > div.sc-papXJ.ixHhna > div.sc-jqUVSM.dBIrCF > button')
-#        buttonc.click()
-#    except:
-  #      return
-#Try()
-buttonc = driver.find_element(By.CSS_SELECTOR, 'sc-bczRLJ iBneUr mde-consent-accept-btn')
-buttonc.click()
+def Try():
+    try:
+        buttonc = driver.find_element(By.CSS_SELECTOR, '#mde-consent-modal-container > div.sc-iBkjds.frmJSB > div.sc-papXJ.ixHhna > div.sc-jqUVSM.dBIrCF > button')
+        buttonc.click()
+    except:
+        return
+Try()
+#buttonc = driver.find_element(By.CSS_SELECTOR, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
+#buttonc.click()
 sleep(5.0)
 
 
