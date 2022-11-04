@@ -52,8 +52,8 @@ def Try():
     except:
         return
 Try()
-#buttonc = driver.find_element(By.CSS_SELECTOR, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
-#buttonc.click()
+buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
+buttonc.click()
 sleep(5.0)
 
 
