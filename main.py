@@ -60,20 +60,21 @@ sleep(5.0)
 
 sleep(5.0)
 #Marke_input=input("Welche Marke? :")
-WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div'))).click()
+WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div'))).click()
 
 #Marke_pusc = driver.find_element(By.CSS_SELECTOR , '#root > div.hp7JS > div > article.RSseD._3LZ_7._2iEKW > section > div > div.UiAUP > div > div:nth-child(1) > div > select')
 Marke_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div')
 ActionChains(driver).move_to_element(Marke_push).click(Marke_push).perform()
-
+Marke_push.send_keys("Audi")
 sleep(5.0)
 
 sleep(5.0)
-Marke_push.click()
+#Marke_push.click()
 
 #Model_input = input("Welches Modell ? :")
-Model_push = driver.find_element(By.CSS_SELECTOR , '#root > div.hp7JS > div > article.RSseD._3LZ_7._2iEKW > section > div > div.UiAUP > div > div:nth-child(2) > div > select')
-Model_push.click()
+WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[2]/div/select'))).click()
+Model_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[2]/div/select')
+#Model_push.click()
 Model_push.send_keys("S3")
 
 #KM_input = input("Wie viel Kilometer ? :")
