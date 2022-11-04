@@ -10,10 +10,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 
-#Chrome options
-
-
-
+#Chrome options#
 client = Client("bjHKdba7y0Hj8LRlRs3i")
 
 
