@@ -105,7 +105,10 @@ def returnthevalue():
         sleep(10.0)
 
         get_URL = driver.current_url
+        return valueget
         return get_URL
+        resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2",get_URL,
+        "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
 
 
 
@@ -115,8 +118,7 @@ def returnthevalue():
 
 
 
-resp = client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2",returnthevalue(),
-       "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
+
 
 
 
