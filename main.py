@@ -47,7 +47,7 @@ driver.get(Url)
 sleep(10.0)
 def Try():
     try:
-        buttonc = driver.find_element(By.CSS_SELECTOR, '#mde-consent-modal-container > div.sc-iBkjds.frmJSB > div.sc-papXJ.ixHhna > div.sc-jqUVSM.dBIrCF > button')
+        buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
         buttonc.click()
     except:
         return
@@ -60,7 +60,7 @@ sleep(5.0)
 sleep(5.0)
 #Marke_input=input("Welche Marke? :")
 #Marke_pusc = driver.find_element(By.CSS_SELECTOR , '#root > div.hp7JS > div > article.RSseD._3LZ_7._2iEKW > section > div > div.UiAUP > div > div:nth-child(1) > div > select')
-Marke_push = driver.find_element(By.CSS_SELECTOR,'#root > div > div > article.RSseD._3LZ_7._2iEKW > section > div > div.UiAUP > div > div:nth-child(1) > div > select')
+Marke_push = driver.find_element(By.XPATH , '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div/select')
 Marke_push.send_keys("Audi")
 Marke_push.click()
 
