@@ -81,7 +81,7 @@ def AUDISEARCH():
         sleep(3.0)
     prices3()
     sleep(1.0)
-    confirmationbut = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select')
+    confirmationbut = driver.find_element(By.XPATH, '//*[@id="modelDescription1-ds"]')
     confirmationbut.click()
     # Funktion für die Plausibilisierung
     def prufung():
