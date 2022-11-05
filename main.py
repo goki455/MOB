@@ -86,10 +86,10 @@ def prices3():#("Wie viel soll er kosten ? :") (5000€) Click
 prices3()
 # Funktion für die Plausibilisierung
 def prufung():
-    span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]/span')
+    span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]/span/span')
     global valueget
     valueget = (span_element.text[0])
-    sleep(8.0)
+    sleep(3.0)
 prufung()
 def returnthevalue():
 
