@@ -77,6 +77,7 @@ def AUDISEARCH():
         Price_push = driver.find_element(By.XPATH , '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
         Price_push.click()
         sleep(1.0)
+        Price_push.click()
         
     prices3()
     
