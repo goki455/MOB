@@ -65,8 +65,6 @@ def AUDISEARCH():
     sleep(2.0)
     #Marke_push.click()
     def models3():          #Model_input = input("Welches Modell ? :")
-
-        WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="selectModel1-ds"]'))).click()
         Model_push = driver.find_element(By.XPATH , '//*[@id="selectModel1-ds"]')
         #Model_push.click()
         Model_push.send_keys("S3")
