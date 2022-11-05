@@ -42,7 +42,7 @@ Url = ("https://www.mobile.de/")
 driver.get(Url)
 #buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 #buttonc.click()
-sleep(10.0)
+sleep(4.0)
 def Try():
     try:
         buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
@@ -52,10 +52,10 @@ def Try():
 Try()
 #buttonc = driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div[2]/div[1]/button')
 #buttonc.click()
-sleep(5.0)
 
 
-sleep(5.0)
+
+
 #Marke_input=input("Welche Marke? :")
 WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div'))).click()
 
@@ -65,7 +65,7 @@ WebDriverWait(driver,5).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="roo
 clic_Marke = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[1]/div/select/optgroup[1]/option[1]')
 clic_Marke.click()
 
-sleep(5.0)
+
 
 sleep(5.0)
 #Marke_push.click()
@@ -92,14 +92,14 @@ sleep(3.0)
 
 span_element = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[8]/button/span/span/span')
 valueget = (span_element.text[0])
-sleep(4.0)
+sleep(3.0)
 
 def returnthevalue():
 
     if valueget > "0":
         next_c = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/article[1]/section/div/div[2]/div/div[8]/button/span/span/span')
         next_c.click()
-        sleep(10.0)
+        sleep(5.0)
 
         get_URL = driver.current_url
         return valueget
