@@ -76,8 +76,6 @@ def AUDISEARCH():
     def prices3():#("Wie viel soll er kosten ? :") (5000€) Click
         Price_push = driver.find_element(By.XPATH , '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
         Price_push.click()
-        confirmationbut = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[1]/div/div/button[1]')
-        confirmationbut.click()
         sleep(3.0)
         
     prices3()
@@ -86,11 +84,13 @@ def AUDISEARCH():
 
     # Funktion für die Plausibilisierung
     def prufung():
-        span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]/span/span')
+        span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
+        driver.find_element(By.XPATH , '//*[@id="payment-filters"]/div[1]/div/div/button[1]').click
         global valueget
         valueget = (span_element.text[0])
         sleep(3.0)
-        return valueget
+        
+
     prufung()
     def returnthevalue():
         if  valueget > "0":
