@@ -89,7 +89,7 @@ def prufung():
     span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]/span')
     global valueget
     valueget = (span_element.text[0])
-    sleep(3.0)
+    sleep(8.0)
 prufung()
 def returnthevalue():
 
