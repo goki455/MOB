@@ -6,7 +6,7 @@ from time import sleep
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+#
 #Chrome options#
 client = Client("bjHKdba7y0Hj8LRlRs3i")
 #push
