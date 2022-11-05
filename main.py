@@ -80,12 +80,14 @@ def AUDISEARCH():
 
         sleep(3.0)
     prices3()
-    confirmationbut = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[6]/div').click()
+    sleep(1.0)
+    confirmationbut = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select')
+    confirmationbut.click()
     # Funktion für die Plausibilisierung
     def prufung():
         span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]/span/span')
         global valueget
-        valueget = (span_element.text)
+        valueget = (span_element.text[0])
         sleep(3.0)
     prufung()
     def returnthevalue():
