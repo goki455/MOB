@@ -88,12 +88,7 @@ def AUDISEARCH():
 
     sleep(1.0)
 
-    # Funktion für die Plausibilisierung
-    def nextssite():
-      
-        next_c = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
-        next_c.click()
-        sleep(6.0)
+
       
         #span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         #global valueget
@@ -102,19 +97,18 @@ def AUDISEARCH():
       
         #print(valueget)
 
-    nextssite()
-    Try()
     
-    def checkif():
-      klickthex = driver.find_element(By.XPATH, '//*[@id="save-search-tutorial"]/span/i')
-      klickthex.click()
+    driver.refresh()
+    sleep(3.0)
+
       
       
       
 
     def returnthevalue():
       
-      elementser=driver.find_element(By.XPATH, '/html/body/div[4]/div[1]/div[3]/div[4]/div[2]/div[2]/div[1]/div[1]/h1')
+      elementser=driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span')
+      global eleget
       eleget=(elementser.text[0])
       if eleget > "0":
         
