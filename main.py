@@ -89,28 +89,40 @@ def AUDISEARCH():
     sleep(1.0)
 
     # Funktion für die Plausibilisierung
-    def prufung():
-        span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
-        global valueget
-        valueget = (span_element.text[0])
-        sleep(6.0)
+    def nextssite():
       
-        print(valueget)
-
-    prufung()
-
-    def returnthevalue():
-      
-      if valueget > "0":
-        
         next_c = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         next_c.click()
-        sleep(5.0)
-        get_URL = driver.current_url
-        client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
+        sleep(4.0)
+      
+        #span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
+        #global valueget
+        #valueget = (span_element.text[0])
+        #sleep(6.0)
+      
+        #print(valueget)
+
+    nextssite()
+    
+    def checkif():
+      elementser=driver.find_element(By.XPATH, '/html/body/div[4]/div[1]/div[3]/div[4]/div[2]/div[2]/div[1]/div[1]/h1')
+      global eleget
+      eleget=elementser.text[0]
+      
+      
+
+    def returnthevalue():
+        if eleget > "0":
+          get_URL = driver.current_url
+          client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
-      else:
-        return
+          
+
+        
+        
+        
+        else:
+          return
              
 
     returnthevalue()
