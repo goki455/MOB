@@ -124,9 +124,9 @@ def AUDISEARCH():
         
         
       else:
-        print(eleget)
+        print("else")
         
-        return
+        
              
 
     returnthevalue()
