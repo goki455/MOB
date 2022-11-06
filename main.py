@@ -112,7 +112,8 @@ def AUDISEARCH():
       eleget=elementser.text
       print(eleget)
       if eleget > "0":
-        print(eleget)
+        newsource = driver.page_source
+        print(newsource)
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
         
