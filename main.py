@@ -78,7 +78,7 @@ def AUDISEARCH():
 
     def prices3():  # ("Wie viel soll er kosten ? :") (5000€) Click
         Price_push = driver.find_element(By.XPATH,
-                                         '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[1]/input')
+                                         '//*[@id="payment-filters"]/div[2]/div/div[2]/div/input')
         Price_push.send_keys("5000")
         needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
         needthisaswell.click()
