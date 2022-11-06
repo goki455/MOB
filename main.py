@@ -109,7 +109,7 @@ def AUDISEARCH():
       
       elementser=driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span')
       global eleget
-      eleget=(elementser.text[0])
+      eleget=elementser.text()
       if eleget > "0":
         
         get_URL = driver.current_url
