@@ -98,7 +98,7 @@ def AUDISEARCH():
         #print(valueget)
 
     
-    #driver.refresh()
+    driver.refresh()
     sleep(1.0)
 
       
@@ -109,7 +109,7 @@ def AUDISEARCH():
       
       elementser=driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span')
       global eleget
-      eleget=elementser.text[0]
+      eleget=elementser.text
       if eleget > "0":
         print(eleget)
         
@@ -122,6 +122,7 @@ def AUDISEARCH():
         
         
       else:
+        print(eleget)
         
         return
              
