@@ -112,6 +112,8 @@ def AUDISEARCH():
       
 
     def returnthevalue():
+      elementser=driver.find_element(By.XPATH, '/html/body/div[4]/div[1]/div[3]/div[4]/div[2]/div[2]/div[1]/div[1]/h1')
+      eleget=(elementser.text[0])
         if eleget > "0":
           get_URL = driver.current_url
           client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
