@@ -81,7 +81,9 @@ def AUDISEARCH():
                                          '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
         Price_push.click()
         sleep(1.0)
-        Price_push.click()
+        refresh = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[5]/div[2]/div[1]/div/label/span')
+        refresh.click()
+        
 
     prices3()
 
@@ -93,8 +95,7 @@ def AUDISEARCH():
         global valueget
         valueget = (span_element.text[0])
         sleep(6.0)
-        refresh = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[5]/div[2]/div[1]/div/label/span')
-        refresh.click()
+      
         print(valueget)
 
     prufung()
