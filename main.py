@@ -81,6 +81,8 @@ def AUDISEARCH():
                                          '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
         Price_push.click()
         sleep(1.0)
+        clickit = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/div/a')
+        clickit.click()
     
         
 
@@ -99,23 +101,19 @@ def AUDISEARCH():
 
     
     #driver.refresh()
-    #sleep(5.0)
+    sleep(5.0)
 
       
       
       
 
     def returnthevalue():
-      iframe = driver.find_elements(By.TAG_NAME, 'iframe')
-      driver.switch_to.frame(iframe[0])
       needthis = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]/span/span')
-      
+      global eleget
       eleget = needthis.text
       print(eleget)
       if eleget > "0":
         
-        driver.switch_to.default_content()
-        sleep(2.0)
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
         
