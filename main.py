@@ -99,7 +99,7 @@ def AUDISEARCH():
 
     
     driver.refresh()
-    sleep(1.0)
+    sleep(5.0)
 
       
       
