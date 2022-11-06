@@ -93,7 +93,7 @@ def AUDISEARCH():
       
         next_c = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         next_c.click()
-        sleep(4.0)
+        sleep(8.0)
       
         #span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         #global valueget
