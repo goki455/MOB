@@ -92,15 +92,16 @@ def AUDISEARCH():
         span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         global valueget
         valueget = (span_element.text[0])
-        sleep(3.0)
+        sleep(6.0)
+        refresh = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[5]/div[2]/div[1]/div/label/span')
+        refresh.click()
+        print(valueget)
 
     prufung()
 
     def returnthevalue():
-      span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
-      valuenew = (span_element.text)
-      print(valuenew)
-      if valuenew > "0":
+      
+      if valueget > "0":
         
         next_c = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         next_c.click()
