@@ -108,12 +108,14 @@ def AUDISEARCH():
     def returnthevalue():
       
       elementser=driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span')
+      elementre= driver.find_element(By.XPATH, '/html/body')
+      elementre.click() # clicking the page
       
       eleget=elementser.text
       print(eleget)
       if eleget > "0":
-        newsource = driver.page_source
-        print(newsource)
+        
+        
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
         
