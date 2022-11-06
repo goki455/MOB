@@ -103,6 +103,7 @@ def AUDISEARCH():
         #print(valueget)
 
     nextssite()
+    Try()
     
     def checkif():
       klickthex = driver.find_element(By.XPATH, '//*[@id="save-search-tutorial"]/span/i')
