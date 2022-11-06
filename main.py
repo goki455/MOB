@@ -98,17 +98,17 @@ def AUDISEARCH():
 
     def returnthevalue():
       
+      if valueget > "0":
         
-       if valueget > "0":
         next_c = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         next_c.click()
         sleep(5.0)
         get_URL = driver.current_url
-
         client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
-        else:
-          return
+      else:
+        return
+          
 
 
 
