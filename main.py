@@ -78,7 +78,7 @@ def AUDISEARCH():
 
     def prices3():  # ("Wie viel soll er kosten ? :") (5000€) Click
         Price_push = driver.find_element(By.XPATH,
-                                         '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[13]')
+                                         '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[15]')
         Price_push.click()
         sleep(1.0)
     
@@ -110,6 +110,7 @@ def AUDISEARCH():
       elementser=driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span')
       global eleget
       eleget=elementser.text
+      print(eleget)
       if eleget > "0":
         print(eleget)
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
