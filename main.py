@@ -111,6 +111,7 @@ def AUDISEARCH():
       global eleget
       eleget=elementser.text
       if eleget > "0":
+        print(eleget)
         
         get_URL = driver.current_url
         client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
