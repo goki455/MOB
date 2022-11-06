@@ -97,7 +97,10 @@ def AUDISEARCH():
     prufung()
 
     def returnthevalue():
-      if valueget > "0":
+      span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
+      valuenew = (span_element.text[0])
+      if valuenew > "0":
+        
         next_c = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
         next_c.click()
         sleep(5.0)
@@ -106,13 +109,7 @@ def AUDISEARCH():
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
       else:
         return
-
-
-
-
-
-
-         
+             
 
     returnthevalue()
 
