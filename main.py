@@ -98,7 +98,7 @@ def AUDISEARCH():
         #print(valueget)
 
     
-    driver.refresh()
+    #driver.refresh()
     sleep(1.0)
 
       
