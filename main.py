@@ -107,7 +107,7 @@ def AUDISEARCH():
     def checkif():
       elementser=driver.find_element(By.XPATH, '/html/body/div[4]/div[1]/div[3]/div[4]/div[2]/div[2]/div[1]/div[1]/h1')
       global eleget
-      eleget=elementser.text[0]
+      eleget=(elementser.text[0])
       
       
 
