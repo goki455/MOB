@@ -81,7 +81,7 @@ def AUDISEARCH():
                                          '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select')
         Price_push.click()
         needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
-        needthisaswell.click
+        needthisaswell.click()
         
         sleep(1.0)
         #clickit = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/div/a')
