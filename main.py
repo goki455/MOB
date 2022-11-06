@@ -98,7 +98,8 @@ def AUDISEARCH():
 
     def returnthevalue():
       span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
-      valuenew = (span_element.text[0])
+      valuenew = (span_element.text)
+      print(valuenew)
       if valuenew > "0":
         
         next_c = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
