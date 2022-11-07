@@ -203,6 +203,7 @@ def SEATSEARCH():
     psbis()
     
     def returnthevalue():
+      sleep(5.0)
       
       drivern.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
       sleep(4.5)
