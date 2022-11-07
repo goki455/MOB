@@ -115,7 +115,7 @@ def AUDISEARCH():
       
 
     def returnthevalue():
-      needthis = driver.find_element(By.CSS_SELECTOR, '#dsp-upper-search-btn > span').text
+      needthis = driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span').text
       #global eleget
       eleget = needthis
       print(eleget)
