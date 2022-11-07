@@ -28,6 +28,7 @@ options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/53
                       'Chrome/107.0.5304.88 Safari/537.36')
 options1.add_argument('--ignore-certificate-errors')
 options1.add_argument('--allow-running-insecure-content')
+global driver
 driver = webdriver.Chrome(options=options1)
 
 
