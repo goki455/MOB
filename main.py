@@ -202,8 +202,8 @@ def SEATSEARCH():
       driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
       sleep(4.5)
       URL2 = driver.current_url
-      driver.get(URL2)
-      eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
+      driver2.get(URL2)
+      eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
       print(eleget2)
       if eleget2 > "0":
         print(eleget2)
