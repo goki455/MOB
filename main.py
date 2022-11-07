@@ -29,6 +29,7 @@ options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/53
 options1.add_argument('--ignore-certificate-errors')
 options1.add_argument('--allow-running-insecure-content')
 driver = webdriver.Chrome(options=options1)
+driver2 =webdriver.Chrome(options=options1)
 
 Url = ("https://suchen.mobile.de/fahrzeuge/search.html?dam=0&sb=rel&vc=Car")
 
@@ -125,8 +126,8 @@ def AUDISEARCH():
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(4.5)
         URL2 = driver.current_url
-        driver.get(URL2)
-        eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]/span').text
+        driver2.get(URL2)
+        eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text
         if eleget2 > "0":
           get_URL = driver.current_url
           client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
