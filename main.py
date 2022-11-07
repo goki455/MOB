@@ -207,7 +207,7 @@ def SEATSEARCH():
       URL2 = driver.current_url
       driver2.get(URL2)
       sleep(3.0)
-      eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
+      eleget2 = driver2.find_element(By.XPATH, '//*[@id="saveSearchStickyBar"]/div/div[1]/h3').text[0]
       print(eleget2)
       if eleget2 > "0":
         print(eleget2)
