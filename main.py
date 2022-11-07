@@ -14,7 +14,7 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 ##
 chromedriver_autoinstaller.install()
 # Chrome options
-
+global options1
 options1 = webdriver.ChromeOptions()  # try
 
 options1.add_argument("--disable-extensions")
@@ -118,18 +118,12 @@ def AUDISEARCH():
     def returnthevalue():
       #Try()
       driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-      sleep(2.5)
+      sleep(2.0)
       URL2=driver.current_url
       driver.get(URL2)
       print(URL2)
-      try:
-        
-        driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[6]/div[4]').click()
-      except:
-        return
-      
-    
-      sleep(5.0)
+     
+      sleep(2.0)
       eleget2 = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[3]/h1').text([0])
       
       print(eleget2)
