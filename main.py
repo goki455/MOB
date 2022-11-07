@@ -122,7 +122,11 @@ def AUDISEARCH():
       URL2=driver.current_url
       driver.get(URL2)
       print(URL2)
-      driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[6]/div[4]').click()
+      try:
+        
+        driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[6]/div[4]').click()
+      except:
+        return
       
     
       sleep(5.0)
