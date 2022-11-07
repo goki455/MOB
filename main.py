@@ -79,8 +79,8 @@ def AUDISEARCH():
 
     def prices3():  # ("Wie viel soll er kosten ? :") (5000€) Click
         #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[1]/input'))).click()
-        driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select')
-        select_by_visible_text("5000")
+        sel = Select(driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select'))
+        sel.select_by_visible_text("5000")
         
       
         
