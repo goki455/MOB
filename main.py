@@ -203,10 +203,11 @@ def SEATSEARCH():
     psbis()
     
     def returnthevalue():
-      sleep(5.0)
+      sleep(3.5)
+      WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="dsp-upper-search-btn"]'))).click()
       
-      drivern.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-      sleep(4.5)
+      #drivern.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
+      sleep(3.5)
       URL2 = drivern.current_url
       drivern2.get(URL2)
       print(drivern2.current_url)
