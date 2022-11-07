@@ -127,7 +127,7 @@ def AUDISEARCH():
         sleep(4.5)
         URL2 = driver.current_url
         driver2.get(URL2)
-        eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text
+        eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
         if eleget2 > "0":
           print(eleget2)
           get_URL = driver.current_url
