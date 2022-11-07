@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #
 # Chrome options#
 client = Client("bjHKdba7y0Hj8LRlRs3i")
-# push
+# push#
 ##
 chromedriver_autoinstaller.install()
 # Chrome options
