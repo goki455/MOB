@@ -116,15 +116,16 @@ def AUDISEARCH():
       
 
     def returnthevalue():
-      Try()
+      #Try()
       driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
       sleep(2.5)
       URL2=driver.current_url
-      driver2 = webdriver.Chrome(options=options1)
-      driver2.get(URL2)
+      driver.get(URL2)
       
-      sleep(3.0)
-      eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
+      sleep(5.0)
+      Try()
+      sleep(5.0)
+      eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
       
       print(eleget2)
       if eleget2 > "0":
