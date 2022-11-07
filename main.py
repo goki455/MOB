@@ -131,9 +131,11 @@ def AUDISEARCH():
         get_URL = driver.current_url
         client.send_message("AUDI!", "Neuer_Audi", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
+        return
         
       else:
         print("keine Ergebnisse!")
+        return
 
           
 
@@ -205,7 +207,7 @@ def SEATSEARCH():
       sleep(4.5)
       URL2 = driver.current_url
       driver2.get(URL2)
-      print(URL3)
+      print(driver2.current_url)
       eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
       print(eleget2)
       if eleget2 > "0":
