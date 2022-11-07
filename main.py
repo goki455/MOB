@@ -14,7 +14,7 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 ##
 chromedriver_autoinstaller.install()
 # Chrome options
-global options1
+
 options1 = webdriver.ChromeOptions()  # try
 
 options1.add_argument("--disable-extensions")
@@ -28,7 +28,6 @@ options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/53
                       'Chrome/107.0.5304.88 Safari/537.36')
 options1.add_argument('--ignore-certificate-errors')
 options1.add_argument('--allow-running-insecure-content')
-global driver
 driver = webdriver.Chrome(options=options1)
 
 
@@ -119,17 +118,22 @@ def AUDISEARCH():
     def returnthevalue():
       #Try()
       driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-      sleep(5.0)
+      sleep(2.5)
       URL2=driver.current_url
       driver.get(URL2)
       print(URL2)
-      Try()
-     
-      sleep(5.0)
-      eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]/span').text([0])
+      try:
+        
+        driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[6]/div[4]').click()
+      except:
+        return
+      
+    
+      sleep(3.0)
+      eleget2 = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[3]/h1').text([:1])
       
       print(eleget2)
-      if eleget2 > "0":
+      if eleget2 != "0":
         print(eleget2)
         get_URL = driver.current_url
         client.send_message("AUDI!", "NEW_AUDI!", "a", "1", "4", "2", get_URL,
