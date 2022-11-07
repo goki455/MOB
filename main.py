@@ -151,7 +151,7 @@ AUDISEARCH()  #
 
 def SEATSEARCH():
     def seatsel():  # Marke_input=input("Welche Marke? :")
-        WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="selectMake1-ds"]'))).click()
+        #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="selectMake1-ds"]'))).click()
         clic_Marke = driver.find_element(By.XPATH, '//*[@id="selectMake1-ds"]/option[104]')
         clic_Marke.click()
 
