@@ -126,7 +126,7 @@ def AUDISEARCH():
         
         get_URL = driver.current_url
         client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
-                  #              "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
+                                "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
           
 
         
