@@ -207,12 +207,13 @@ def SEATSEARCH():
       URL2 = driver.current_url
       driver2.get(URL2)
       sleep(3.0)
-      eleget2 = driver2.find_element(By.XPATH, '//*[@id="saveSearchStickyBar"]/div/div[1]/h3').text[0]
+      eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]')
+      
       print(eleget2)
       if eleget2 > "0":
         print(eleget2)
         get_URL = driver.current_url
-        client.send_message("SEAT!", "Neuer_SEAT!", "a", "1", "4", "2", get_URL,
+        client.send_message("SEAT!", "Neuer_SEAT!", "a", "1", "4", "2", get_URL,#
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
         
       else:
