@@ -116,35 +116,30 @@ def AUDISEARCH():
       
 
     def returnthevalue():
-      needthis = driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span').text
-      #global eleget
-      eleget = needthis
-      print(eleget)
-      if eleget > "0":
+      
+
         
         
-        driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-        sleep(4.5)
-        URL2 = driver.current_url
-        driver2.get(URL2)
-        eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
+      driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
+      sleep(4.5)
+      URL2 = driver.current_url
+      driver2.get(URL2)
+      eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
+      print(eleget2)
+      if eleget2 > "0":
         print(eleget2)
-        if eleget2 > "0":
-          print(eleget2)
-          get_URL = driver.current_url
-          client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
+        get_URL = driver.current_url
+        client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
         
-        else:
-          print("keine Ergebnisse!")
+      else:
+        print("keine Ergebnisse!")
 
           
 
         
         
-        
-      else:
-        print("else")
+
         
         
              
