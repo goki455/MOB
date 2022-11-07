@@ -20,10 +20,10 @@ options1 = webdriver.ChromeOptions()  # try
 options1.add_argument("--disable-extensions")
 options1.add_experimental_option("useAutomationExtension", False)
 options1.add_argument("--proxy-bypass-list=*")
-# options1.add_argument("--disable-gpu")
+options1.add_argument("--disable-gpu")
 # options1.add_argument("--headless")
 options1.add_argument("--window-size=1920,1080")
-# options1.add_argument("no-sandbox")
+options1.add_argument("no-sandbox")
 options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/107.0.5304.88 Safari/537.36')
 options1.add_argument('--ignore-certificate-errors')
