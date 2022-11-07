@@ -130,7 +130,7 @@ def AUDISEARCH():
       
     
       sleep(3.0)
-      eleget2 = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[3]/h1').text([:1])
+      eleget2 = driver.find_element(By.XPATH, '//*[@id="root"]/div/div/div[3]/h1').text([0])
       
       print(eleget2)
       if eleget2 != "0":
