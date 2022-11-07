@@ -58,7 +58,7 @@ Try()
 
 def AUDISEARCH():
     def audisel():  # Marke_input=input("Welche Marke? :")
-        #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="selectMake1-ds"]'))).click()
+        WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="selectMake1-ds"]'))).click()
         clic_Marke = driver.find_element(By.XPATH, '//*[@id="selectMake1-ds"]/option[12]')
         clic_Marke.click()
 
@@ -131,13 +131,11 @@ def AUDISEARCH():
       if eleget2 > "0":
         print(eleget2)
         get_URL = driver.current_url
-        client.send_message("AUDI!", "Neuer_Audi", "a", "1", "4", "2", get_URL,
+        client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
-        return
         
       else:
         print("keine Ergebnisse!")
-        return
 
           
 
@@ -149,7 +147,6 @@ def AUDISEARCH():
              
 
     returnthevalue()
-
 
 
 AUDISEARCH()  #
