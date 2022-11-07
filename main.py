@@ -147,8 +147,7 @@ def AUDISEARCH():
              
 
     returnthevalue()
-    driver.close()
-    driver2.close()
+
 
 
 AUDISEARCH()  #
