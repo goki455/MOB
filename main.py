@@ -118,12 +118,13 @@ def AUDISEARCH():
     def returnthevalue():
       #Try()
       driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-      sleep(2.0)
+      sleep(5.0)
       URL2=driver.current_url
       driver.get(URL2)
       print(URL2)
+      Try()
      
-      sleep(2.0)
+      sleep(5.0)
       eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]/span').text([0])
       
       print(eleget2)
