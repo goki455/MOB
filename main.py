@@ -5,6 +5,7 @@ import chromedriver_autoinstaller
 from time import sleep
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.select import Select
 
 #
 # Chrome options#
@@ -78,11 +79,13 @@ def AUDISEARCH():
 
     def prices3():  # ("Wie viel soll er kosten ? :") (5000€) Click
         #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[1]/input'))).click()
+        driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select')
+        select_by_visible_text("5000")
         
       
         
-        needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
-        needthisaswell.click()
+        #needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
+        #needthisaswell.click()
         
         sleep(1.0)
         #clickit = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/div/a')
@@ -122,7 +125,7 @@ def AUDISEARCH():
         sleep(2.5)
         
         get_URL = driver.current_url
-        #client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
+        client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
                   #              "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
           
 
