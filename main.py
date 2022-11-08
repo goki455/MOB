@@ -20,12 +20,14 @@ options1 = webdriver.ChromeOptions()  # try
 options1.add_argument("--disable-extensions")
 options1.add_experimental_option("useAutomationExtension", False)
 options1.add_argument("--proxy-bypass-list=*")
-# options1.add_argument("--disable-gpu")
+options1.add_argument("--disable-gpu")
 # options1.add_argument("--headless")
 options1.add_argument("--window-size=1920,1080")
 options1.add_argument("no-sandbox")
-options1.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-                      '(KHTML, like Gecko) Chrome/107.0.5304.88 Safari/537.36')
+#options1.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                 #     '(KHTML, like Gecko) Chrome/107.0.5304.88 Safari/537.36')
+options1.add_argument('--user-agent="Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; Microsoft; Lumia 640 XL LTE) AppleWebKit/537.36 (KHTML, like Gecko)
+                      'Chrome/107.0.5304.88 Mobile Safari/537.36 Edge/12.10166"')
 options1.add_argument('--ignore-certificate-errors')
 options1.add_argument('--allow-running-insecure-content')
 driver = webdriver.Chrome(options=options1)
@@ -128,12 +130,7 @@ def AUDISEARCH():
         print(title2)
         Try()
         
-        try:
-          driver2.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]/div[3]').click()
-          print("true")
-        except:
-          print("nichtda")
-          pass
+        
 
         sleep(2.0)
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text
