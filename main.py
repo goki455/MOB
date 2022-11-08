@@ -85,7 +85,7 @@ def AUDISEARCH():
         
       
         
-        needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
+        needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[15]')
         needthisaswell.click()
         
         sleep(1.0)
@@ -183,7 +183,7 @@ def SEATSEARCH():
 
     def prices4():  # ("Wie viel soll er kosten ? :") (5000€) Click
         needthisaswell3 = driver.find_element(By.XPATH,
-                                             '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[15]')
+                                             '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[8]')
         needthisaswell3.click()
         sleep(1.0)
     prices4()
