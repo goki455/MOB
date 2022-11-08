@@ -125,7 +125,9 @@ def AUDISEARCH():
         print(URL2)
         try:
           driver.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]').click()
+          print("true")
         except:
+          print("nichtda")
           return
 
         sleep(2.0)
