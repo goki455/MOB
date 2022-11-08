@@ -123,6 +123,7 @@ def AUDISEARCH():
         driver.get(URL2)
         Try()
         print(URL2)
+        driver.find_element(By.XPATH,'//*[@id="save-search-tutorial"]/span/i').click()
         
 
         sleep(2.0)
