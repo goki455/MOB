@@ -1,5 +1,8 @@
 name: run main.py
 on:
+  push:
+    branches:
+      - main
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron: '*/5 * * * *' # Every 5 Mins
