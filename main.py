@@ -124,7 +124,7 @@ def AUDISEARCH():
         Try()
         
         try:
-          driver2.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]').click()
+          driver2.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]/div[3]').click()
           print("true")
         except:
           print("nichtda")
