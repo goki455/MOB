@@ -240,8 +240,12 @@ def SEATSEARCH():
     psbis()
     
     def returnthevalue1():
-      sleep(1.0)
-        Try()
+        sleep(1.0)
+        try:
+          buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
+          buttonc.click()
+          except:
+            pass
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
         URL2 = driver.current_url
