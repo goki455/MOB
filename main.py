@@ -37,7 +37,7 @@ Url = ("https://suchen.mobile.de/fahrzeuge/search.html?dam=0&sb=rel&vc=Car")
 driver.get(Url)
 # buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 # buttonc.click()
-sleep(3.0)
+sleep(2.5)
 
 
 def Try():
@@ -65,7 +65,7 @@ def AUDISEARCH():
 
     audisel()
 
-    sleep(2.0)
+    sleep(3.0)
 
     # Marke_push.click()
     def models3():  # Model_input = input("Welches Modell ? :")
@@ -80,6 +80,7 @@ def AUDISEARCH():
         KM_push.send_keys("100000")
 
     kms3()
+    sleep(1.0)
 
     def prices3():  # ("Wie viel soll er kosten ? :") (5000€) Click
         #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[1]/input'))).click()
@@ -100,7 +101,7 @@ def AUDISEARCH():
     prices3()
 
     sleep(1.0)
-
+    sleep(1.0)
 
       
         #span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
@@ -113,6 +114,7 @@ def AUDISEARCH():
     
     #driver.refresh()
     sleep(5.0)
+    sleep(1.0)
 
       
       
@@ -122,10 +124,12 @@ def AUDISEARCH():
       
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
+        sleep(1.0)
         URL2 = driver.current_url
         #driver2.get(URL2)
         driver.get(URL2)
         sleep(3.0)
+        sleep(1.0)
         
         title = driver.title
         #title2 = driver2.title
@@ -137,6 +141,7 @@ def AUDISEARCH():
         
 
         sleep(2.0)
+        sleep(1.0)
         eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
     
         print(eleget2)
@@ -144,6 +149,7 @@ def AUDISEARCH():
           sleep(1.5)
           get_URL = driver.current_url
           sleep(1.5)
+          sleep(1.0)
           client.send_message("AUDI!", "Neuer Audi", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
           driver.close()
@@ -182,18 +188,26 @@ def SEATSEARCH():
     seatsel()
 
     sleep(2.0)
+    sleep(1.0)
+    sleep(1.0)
 
     # Marke_push.click()
     def mleon():  # Model_input = input("Welches Modell ? :")
         Model_push1 = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
         # Model_push.click()
         Model_push1.send_keys("Leon")
+        sleep(1.0)
+        sleep(1.0)
+        sleep(1.0)
 
     mleon()
 
     def kms2():  # KM_input = input("Wie viel Kilometer ? :")
         KM_push1 = driver.find_element(By.XPATH, '//*[@id="maxMileage"]')
         KM_push1.send_keys("100000")
+        sleep(1.0)
+        sleep(1.0)
+        sleep(1.0)
 
     kms2()
 
@@ -202,12 +216,14 @@ def SEATSEARCH():
                                              '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[8]')
         needthisaswell3.click()
         sleep(1.0)
+        sleep(1.0)
     prices4()
     
     def psvon():  # ("Wie viel von 150PS
         needthisaswell2 = driver.find_element(By.XPATH,
                                              '//*[@id="minPowerAsArray-s"]/option[10]')
         needthisaswell2.click()
+        sleep(1.0)
         sleep(1.0)
     psvon()
     
@@ -216,11 +232,15 @@ def SEATSEARCH():
                                              '//*[@id="maxPowerAsArray-s"]/option[12]')
         needthisaswell1.click()
         sleep(1.5)
+        sleep(1.0)
+        sleep(1.0)
+        sleep(1.0)
 
         sleep(1.0)
     psbis()
     
     def returnthevalue1():
+      sleep(1.0)
         Try()
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
@@ -228,7 +248,7 @@ def SEATSEARCH():
         #driver2.get(URL2)
         driver.get(URL2)
         sleep(3.0)
-        
+        sleep(1.0)
         title = driver.title
         #title2 = driver2.title
         
