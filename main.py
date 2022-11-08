@@ -224,6 +224,14 @@ def SEATSEARCH():
         sleep(2.5)
         URL2 = driver.current_url
         driver2.get(URL2)
+        Try()
+        #print(URL2)
+        try:
+          driver.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]').click()
+          print("true")
+        except:
+          print("nichtda")
+          return        
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
     
         print(eleget2)
