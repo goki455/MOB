@@ -115,7 +115,8 @@ def AUDISEARCH():
       
       
 
-    def returnthevalue():     
+    def returnthevalue(): 
+      
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(4.5)
         URL2 = driver.current_url
@@ -158,8 +159,8 @@ driver.get(Url)
 def SEATSEARCH():
     def seatsel():  # Marke_input=input("Welche Marke? :")
         #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="selectMake1-ds"]'))).click()
-        clic_Marke = driver.find_element(By.XPATH, '//*[@id="selectMake1-ds"]/option[104]')
-        clic_Marke.click()
+        clic_Marke2 = driver.find_element(By.XPATH, '//*[@id="selectMake1-ds"]/option[104]')
+        clic_Marke2.click()
 
     seatsel()
 
@@ -167,40 +168,40 @@ def SEATSEARCH():
 
     # Marke_push.click()
     def mleon():  # Model_input = input("Welches Modell ? :")
-        Model_push = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
+        Model_push1 = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
         # Model_push.click()
-        Model_push.send_keys("Leon")
+        Model_push1.send_keys("Leon")
 
     mleon()
 
-    def kms3():  # KM_input = input("Wie viel Kilometer ? :")
-        KM_push = driver.find_element(By.XPATH, '//*[@id="maxMileage"]')
-        KM_push.send_keys("100000")
+    def kms2():  # KM_input = input("Wie viel Kilometer ? :")
+        KM_push1 = driver.find_element(By.XPATH, '//*[@id="maxMileage"]')
+        KM_push1.send_keys("100000")
 
-    kms3()
+    kms2()
 
-    def prices3():  # ("Wie viel soll er kosten ? :") (5000€) Click
-        needthisaswell = driver.find_element(By.XPATH,
+    def prices4():  # ("Wie viel soll er kosten ? :") (5000€) Click
+        needthisaswell3 = driver.find_element(By.XPATH,
                                              '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[8]')
-        needthisaswell.click()
+        needthisaswell3.click()
         sleep(1.0)
-    prices3()
+    prices4()
     
     def psvon():  # ("Wie viel von 150PS
-        needthisaswell = driver.find_element(By.XPATH,
+        needthisaswell2 = driver.find_element(By.XPATH,
                                              '//*[@id="minPowerAsArray-s"]/option[10]')
-        needthisaswell.click()
+        needthisaswell2.click()
         sleep(1.0)
     psvon()
     
     def psbis():  # ("Wie viel PS 250PS
-        needthisaswell = driver.find_element(By.XPATH,
+        needthisaswell1 = driver.find_element(By.XPATH,
                                              '//*[@id="maxPowerAsArray-s"]/option[12]')
-        needthisaswell.click()
+        needthisaswell1.click()
         sleep(1.0)
     psbis()
     
-    def returnthevalue():
+    def returnthevalue1():
         print(driver.current_url)
       
      
@@ -234,7 +235,7 @@ def SEATSEARCH():
         
              
 
-    returnthevalue()
+    returnthevalue1()
 
     
 SEATSEARCH()
