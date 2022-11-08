@@ -128,7 +128,7 @@ def AUDISEARCH():
           print("true")
         except:
           print("nichtda")
-          return
+          pass
 
         sleep(2.0)
         eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
