@@ -244,8 +244,9 @@ def SEATSEARCH():
         try:
           buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
           buttonc.click()
-          except:
-            pass
+        except:
+          
+          pass
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
         URL2 = driver.current_url
