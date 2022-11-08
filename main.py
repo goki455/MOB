@@ -130,7 +130,7 @@ def AUDISEARCH():
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]')
         eleget2.text[0]
         print(eleget2)
-        if eleget2 > "0":
+        if eleget2 != "0":
           print(eleget2)
           get_URL = driver.current_url
           client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
