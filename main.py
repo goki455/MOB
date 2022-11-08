@@ -221,6 +221,7 @@ def SEATSEARCH():
     psbis()
     
     def returnthevalue1():
+        Try()
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
         URL2 = driver.current_url
