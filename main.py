@@ -206,7 +206,7 @@ def SEATSEARCH():
     def returnthevalue1():
         print(driver.current_url)
         sleep(4.0)
-        driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')click()
+        driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button').click()
       
      
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
