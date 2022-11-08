@@ -206,6 +206,7 @@ def SEATSEARCH():
     
     def returnthevalue1():
         print(driver.current_url)
+        sleep(15.0)
       
      
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
