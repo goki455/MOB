@@ -120,18 +120,18 @@ def AUDISEARCH():
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         sleep(2.5)
         URL2 = driver.current_url
-        driver.get(URL2)
+        driver2.get(URL2)
         Try()
-        print(URL2)
+        
         try:
-          driver.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]').click()
+          driver2.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]').click()
           print("true")
         except:
           print("nichtda")
           pass
 
         sleep(2.0)
-        eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
+        eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
     
         print(eleget2)
         if eleget2 != "0":
@@ -231,7 +231,7 @@ def SEATSEARCH():
           print("true")
         except:
           print("nichtda")
-          return        
+          pass       
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
     
         print(eleget2)
