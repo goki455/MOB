@@ -109,7 +109,7 @@ def AUDISEARCH():
 
     
     #driver.refresh()
-    sleep(2.0)
+    sleep(5.0)
 
       
       
@@ -125,7 +125,7 @@ def AUDISEARCH():
           Try()
         except:
           return
-        
+        sleep(10.0)
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
     
         print(eleget2)
