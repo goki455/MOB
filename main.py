@@ -199,8 +199,7 @@ def SEATSEARCH():
                                              '//*[@id="maxPowerAsArray-s"]/option[12]')
         needthisaswell1.click()
         sleep(1.5)
-        alsothis = driver.find_element(By.XPATH, '//*[@id="maxPowerAsArray"]')
-        alsothis.click()
+
         sleep(1.0)
     psbis()
     
