@@ -125,9 +125,7 @@ def AUDISEARCH():
     
         print(eleget2)
         if eleget2 != "0":
-          
           get_URL = driver2.current_url
-          print(get_URL)
           client.send_message("AUDI!", "Neuer Audi", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
           driver.close()
@@ -218,7 +216,6 @@ def SEATSEARCH():
     
         print(eleget2)
         if eleget2 != "0":
-          print(eleget2)
           get_URL = driver2.current_url
           client.send_message("SEAT!", "LEON", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
