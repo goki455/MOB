@@ -123,8 +123,10 @@ def AUDISEARCH():
         driver.get(URL2)
         Try()
         print(URL2)
-        driver.find_element(By.XPATH,'//*[@id="save-search-tutorial"]/span/i').click()
-        
+        try:
+          driver.find_element(By.XPATH,'//*[@id="recaptcha-anchor"]').click()
+        except:
+          return
 
         sleep(2.0)
         eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
