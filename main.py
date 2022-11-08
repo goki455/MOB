@@ -85,7 +85,7 @@ def AUDISEARCH():
         
       
         
-        needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
+        needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[15]')
         needthisaswell.click()
         
         sleep(1.0)
@@ -109,7 +109,7 @@ def AUDISEARCH():
 
     
     #driver.refresh()
-    sleep(5.0)
+    sleep(2.0)
 
       
       
@@ -118,7 +118,7 @@ def AUDISEARCH():
     def returnthevalue(): 
       
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-        sleep(4.5)
+        sleep(2.5)
         URL2 = driver.current_url
         driver2.get(URL2)
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
@@ -182,7 +182,7 @@ def SEATSEARCH():
 
     def prices4():  # ("Wie viel soll er kosten ? :") (5000€) Click
         needthisaswell3 = driver.find_element(By.XPATH,
-                                             '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[8]')
+                                             '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[15]')
         needthisaswell3.click()
         sleep(1.0)
     prices4()
@@ -205,12 +205,12 @@ def SEATSEARCH():
     
     def returnthevalue1():
         print(driver.current_url)
-        sleep(4.0)
+        sleep(2.0)
         driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button').click()
       
      
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-        sleep(4.5)
+        sleep(2.5)
         URL2 = driver.current_url
         driver2.get(URL2)
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
@@ -219,7 +219,7 @@ def SEATSEARCH():
         if eleget2 != "0":
           print(eleget2)
           get_URL = driver.current_url
-          client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
+          client.send_message("SEAT!", "LEON", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
           driver.close()
           driver2.close()
