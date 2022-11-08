@@ -1,8 +1,9 @@
 name: run main.py
-
 on:
   schedule:
-  - cron: '*/5 * * * *' # Every 15 Mins
+    # * is a special character in YAML so you have to quote this string
+    - cron: '*/5 * * * *' # Every 5 Mins
+
 
 
 jobs:
