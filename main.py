@@ -45,7 +45,7 @@ def Try():
         buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
         buttonc.click()
     except:
-        return
+        pass
 
 
 Try()
