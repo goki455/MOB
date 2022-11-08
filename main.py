@@ -122,6 +122,7 @@ def AUDISEARCH():
         URL2 = driver.current_url
         driver.get(URL2)
         Try()
+        print(URL2)
         
 
         sleep(2.0)
