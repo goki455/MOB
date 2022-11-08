@@ -123,7 +123,7 @@ def AUDISEARCH():
         driver2.get(URL2)
         try:
           Try()
-        else:
+        except:
           return
         
         eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
