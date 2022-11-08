@@ -14,23 +14,22 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 ##
 chromedriver_autoinstaller.install()
 # Chrome options
-global options1
+
 options1 = webdriver.ChromeOptions()  # try
 
 options1.add_argument("--disable-extensions")
 options1.add_experimental_option("useAutomationExtension", False)
 options1.add_argument("--proxy-bypass-list=*")
-options1.add_argument("--disable-gpu")
+# options1.add_argument("--disable-gpu")
 # options1.add_argument("--headless")
 options1.add_argument("--window-size=1920,1080")
-options1.add_argument("no-sandbox")
+# options1.add_argument("no-sandbox")
 options1.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/107.0.5304.88 Safari/537.36')
 options1.add_argument('--ignore-certificate-errors')
 options1.add_argument('--allow-running-insecure-content')
-global driver
 driver = webdriver.Chrome(options=options1)
-
+driver2 =webdriver.Chrome(options=options1)
 
 Url = ("https://suchen.mobile.de/fahrzeuge/search.html?dam=0&sb=rel&vc=Car")
 
@@ -81,12 +80,12 @@ def AUDISEARCH():
 
     def prices3():  # ("Wie viel soll er kosten ? :") (5000€) Click
         #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[1]/input'))).click()
-        sel = Select(driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select'))
-        sel.select_by_visible_text("9.000 €")
+        #sel = Select(driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select'))
+        #sel.select_by_visible_text("5.000 €")
         
       
         
-        needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[15]')
+        needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
         needthisaswell.click()
         
         sleep(1.0)
@@ -117,33 +116,36 @@ def AUDISEARCH():
       
 
     def returnthevalue():
-      
-      #Try()
-      driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-      sleep(5.5)
-      URL2=driver.current_url
-      driver
-      driver.get(URL2)
-      print(URL2)
-      sleep(15.0)
-      eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]/span')
-      eleget2.text([0])
-      print(eleget2)
-      if eleget2 != "0":
-        get_URL = driver.current_url
-        client.send_message("AUDI!", "NEW_AUDI!", "a", "1", "4", "2", get_URL,
-                                "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
-        return
+      needthis = driver.find_element(By.XPATH, '//*[@id="dsp-lower-search-btn"]/span/span').text
+      #global eleget
+      eleget = needthis
+      print(eleget)
+      if eleget > "0":
         
-      else:
-        print("keine Ergebnisse!")
-        return
+        
+        driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
+        sleep(4.5)
+        URL2 = driver.current_url
+        driver2.get(URL2)
+        eleget2 = driver2.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]')
+        eleget2.text([0])
+        print(eleget2)
+        if eleget2 > "0":
+          print(eleget2)
+          get_URL = driver.current_url
+          client.send_message("NEW_Car", "Neues Auto", "a", "1", "4", "2", get_URL,
+                                "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
+        
+        else:
+          print("keine Ergebnisse!")
 
           
 
         
         
-
+        
+      else:
+        print("else")
         
         
              
@@ -151,4 +153,4 @@ def AUDISEARCH():
     returnthevalue()
 
 
-AUDISEARCH()  #
+AUDISEARCH()
