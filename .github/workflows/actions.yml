@@ -5,7 +5,7 @@ on:
       - main
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: '*/16 * * * *' # Every 15 Mins
+    - cron: '* * * * *' # Every 15 Mins
 
 
 
