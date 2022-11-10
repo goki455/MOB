@@ -197,6 +197,7 @@ def SEATSEARCH():
         Model_push1 = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
         driver.title
         print(driver.title)
+        delay1
         # Model_push.click()
         Model_push1.send_keys("Leon")
         delay1
