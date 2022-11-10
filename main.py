@@ -194,6 +194,8 @@ def SEATSEARCH():
     # Marke_push.click()
     def mleon():  # Model_input = input("Welches Modell ? :")
         Model_push1 = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
+        driver.title
+        print(driver.title)
         # Model_push.click()
         Model_push1.send_keys("Leon")
         delay1
