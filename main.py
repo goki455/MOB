@@ -190,6 +190,7 @@ def SEATSEARCH():
     seatsel()
 
     delay1
+    Try()
 
     # Marke_push.click()
     def mleon():  # Model_input = input("Welches Modell ? :")
