@@ -6,6 +6,7 @@ from time import sleep
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
+from random import randint
 
 ##
 # Chrome options#
@@ -14,7 +15,7 @@ client = Client("bjHKdba7y0Hj8LRlRs3i")
 ##
 chromedriver_autoinstaller.install()
 # Chrome options
-
+delay1 = sleep(randint(2,7))
 options1 = webdriver.ChromeOptions()  # try
 
 options1.add_argument("--disable-extensions")
@@ -37,7 +38,7 @@ Url = ("https://suchen.mobile.de/fahrzeuge/search.html?dam=0&sb=rel&vc=Car")
 driver.get(Url)
 # buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
 # buttonc.click()
-sleep(2.5)
+delay1
 
 
 def Try():
@@ -71,12 +72,14 @@ def AUDISEARCH():
     def models3():  # Model_input = input("Welches Modell ? :")
         Model_push = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
         # Model_push.click()
+        delay1
         Model_push.send_keys("S3")
 
     models3()
 
     def kms3():  # KM_input = input("Wie viel Kilometer ? :")
         KM_push = driver.find_element(By.XPATH, '//*[@id="maxMileage"]')
+        delay1
         KM_push.send_keys("100000")
 
     kms3()
@@ -90,9 +93,10 @@ def AUDISEARCH():
       
         
         needthisaswell = driver.find_element(By.XPATH, '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[11]')
+        delay1
         needthisaswell.click()
         
-        sleep(1.0)
+        delay1
         #clickit = driver.find_element(By.XPATH, '//*[@id="form-dsp"]/div[2]/div/div[1]/div[2]/div[1]/div[2]/div/a')
         #clickit.click()
     
@@ -100,8 +104,7 @@ def AUDISEARCH():
 
     prices3()
 
-    sleep(1.0)
-    sleep(1.0)
+    delay1
 
       
         #span_element = driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]')
@@ -113,8 +116,8 @@ def AUDISEARCH():
 
     
     #driver.refresh()
-    sleep(5.0)
-    sleep(1.0)
+    delay1
+    delay1
 
       
       
@@ -123,13 +126,13 @@ def AUDISEARCH():
     def returnthevalue(): 
       
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
-        sleep(2.5)
-        sleep(1.0)
+        delay1
+        delay1
         URL2 = driver.current_url
         #driver2.get(URL2)
         driver.get(URL2)
-        sleep(3.0)
-        sleep(1.0)
+
+        delay1
         
         title = driver.title
         #title2 = driver2.title
@@ -140,16 +143,15 @@ def AUDISEARCH():
         
         
 
-        sleep(2.0)
-        sleep(1.0)
+        delay1
         eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
     
         print(eleget2)
         if eleget2 != "0":
-          sleep(1.5)
+          delay1
           get_URL = driver.current_url
-          sleep(1.5)
-          sleep(1.0)
+          delay1
+          delay1
           client.send_message("AUDI!", "Neuer Audi", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
           driver.close()
@@ -187,27 +189,21 @@ def SEATSEARCH():
 
     seatsel()
 
-    sleep(2.0)
-    sleep(1.0)
-    sleep(1.0)
+    delay1
 
     # Marke_push.click()
     def mleon():  # Model_input = input("Welches Modell ? :")
         Model_push1 = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
         # Model_push.click()
         Model_push1.send_keys("Leon")
-        sleep(1.0)
-        sleep(1.0)
-        sleep(1.0)
+        delay1
 
     mleon()
 
     def kms2():  # KM_input = input("Wie viel Kilometer ? :")
         KM_push1 = driver.find_element(By.XPATH, '//*[@id="maxMileage"]')
         KM_push1.send_keys("100000")
-        sleep(1.0)
-        sleep(1.0)
-        sleep(1.0)
+        delay1
 
     kms2()
 
@@ -215,32 +211,26 @@ def SEATSEARCH():
         needthisaswell3 = driver.find_element(By.XPATH,
                                              '//*[@id="payment-filters"]/div[2]/div/div[2]/div/div[2]/select/option[8]')
         needthisaswell3.click()
-        sleep(1.0)
-        sleep(1.0)
+        delay1
     prices4()
     
     def psvon():  # ("Wie viel von 150PS
         needthisaswell2 = driver.find_element(By.XPATH,
                                              '//*[@id="minPowerAsArray-s"]/option[10]')
         needthisaswell2.click()
-        sleep(1.0)
-        sleep(1.0)
+        delay1
     psvon()
     
     def psbis():  # ("Wie viel PS 250PS
         needthisaswell1 = driver.find_element(By.XPATH,
                                              '//*[@id="maxPowerAsArray-s"]/option[12]')
         needthisaswell1.click()
-        sleep(1.5)
-        sleep(1.0)
-        sleep(1.0)
-        sleep(1.0)
-
-        sleep(1.0)
+        delay1
+        delay1
     psbis()
     
     def returnthevalue1():
-        sleep(1.0)
+        delay1
         try:
           buttonc = driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button')
           buttonc.click()
@@ -252,8 +242,8 @@ def SEATSEARCH():
         URL2 = driver.current_url
         #driver2.get(URL2)
         driver.get(URL2)
-        sleep(3.0)
-        sleep(1.0)
+        delay1
+        sleep(2.0)
         title = driver.title
         #title2 = driver2.title
         
@@ -263,14 +253,15 @@ def SEATSEARCH():
         
         
 
-        sleep(2.0)
+        
+        delay1
         eleget2 = driver.find_element(By.XPATH, '//*[@id="minisearch-search-btn"]').text[0]
     
         print(eleget2)
         if eleget2 != "0":
-          sleep(1.5)
+          delay1
           get_URL = driver.current_url
-          sleep(1.5)
+          delay1
           client.send_message("SEAT!", "Neuer SEAT!", "a", "1", "4", "2", get_URL,
                                 "Mobile öffnen!", "0", "2", "60", "600", "1", "", "", "")
           driver.close()
