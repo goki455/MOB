@@ -181,6 +181,9 @@ driver = webdriver.Chrome(options=options1)
 driver2 =webdriver.Chrome(options=options1)
 
 driver.get(Url)
+
+delay1
+Try()
 def SEATSEARCH():
     def seatsel():  # Marke_input=input("Welche Marke? :")
         #WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="selectMake1-ds"]'))).click()
@@ -190,7 +193,7 @@ def SEATSEARCH():
     seatsel()
 
     delay1
-    Try()
+    
 
     # Marke_push.click()
     def mleon():  # Model_input = input("Welches Modell ? :")
