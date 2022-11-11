@@ -50,7 +50,7 @@ def Try():
         pass
 
 
-
+Try()
 
 
 # buttonc = driver.find_element(By.XPATH, '/html/body/div[1]/div[2]/div[2]/div[1]/button')
@@ -59,7 +59,7 @@ def Try():
 
 def AUDISEARCH():
     def audisel():  # Marke_input=input("Welche Marke? :")
-        driver.find_element(By.XPATH, '//*[@id="mde-consent-modal-container"]/div[2]/div[2]/div[1]/button').click()
+        
         WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="selectMake1-ds"]'))).click()
         clic_Marke = driver.find_element(By.XPATH, '//*[@id="selectMake1-ds"]/option[12]')
         clic_Marke.click()
