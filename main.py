@@ -125,6 +125,11 @@ def AUDISEARCH():
 
     def returnthevalue(): 
       
+        title = driver.title
+        #title2 = driver2.title
+        
+        print(title)  
+      
         driver.find_element(By.XPATH, '//*[@id="dsp-upper-search-btn"]').click()
         delay1
         delay1
