@@ -72,7 +72,7 @@ def AUDISEARCH():
     def models3():  # Model_input = input("Welches Modell ? :")
         Model_push = driver.find_element(By.XPATH, '//*[@id="selectModel1-ds"]')
         # Model_push.click()
-        delay1
+        sleep(0.5)
         Model_push.send_keys("S3")
 
     models3()
